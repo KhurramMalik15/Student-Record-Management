@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Records Management</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            margin-right: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .delete-btn {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+        }
+
+        .delete-btn:hover {
+            background-color: #ff1c1c;
+        }
+
+        .edit-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+        }
+
+        .edit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Student Records Management</h2>
+    <form id="studentForm">
+        <input type="text" placeholder="Name" id="nameInput" required />
+        <input type="number" placeholder="Age" id="ageInput" required />
+        <select id="genderInput" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input type="text" placeholder="Grade" id="gradeInput" required />
+        <button type="submit" id="submitButton">Add Student</button>
+    </form>
+
+    <h3>Student Records</h3>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="studentBody">
+            <!-- Student records will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
